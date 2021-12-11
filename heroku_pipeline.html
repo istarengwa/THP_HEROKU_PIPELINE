@@ -1,25 +1,19 @@
 <h1>Ressource : Comprende Heroku Pipeline</h1>
 
 <h2>1. Introduction</h2>
-
 <p>Dans ce cours nous allons voir comment utiliser heroku pipeline, une des nombreuses utilités pratique et indispensable d'heroku</p>
-
 <p>Grâce à heroku pipeline tu vas pouvoir créer plusieurs application heroku pour un même projet, pour avoir une branche developpement et une branche en production d'un même repo github</p>
 
 <h2>2. Historique</h2>
-
 <p>Je ne sais pas si tu es déjà au courant, mais Heroku fut fondé en 2007 par James Lindenbaum, Adam Wiggins et Orion Henry.  Le 8 décembre 2010, Salesforce.com se porte acquéreur de l'entreprise Heroku et l'intègre comme filiale du groupe.</p>
-
 <p>En Juillet 2011 Yukihiro "Matz" Matsumoto, créateur et mainteneur du langage Ruby, rejoint Heroku comme Chief Architect. La même année Heroku et Facebook concluent un partenariat.</p>
 
 <h2>3. La ressource</h2>
-
 <p>Pour commencer, rien de plus simple, créer ton application RoR et lance heroku dans ton navigateur à cette adresse : https://www.heroku.com/</p>
 
 <h3>3.1 Application pipeline</h3>
 
 <h4>3.1.1 Création de la pipeline & Link github</h4>
-
 <p>Pour commencer il te faut créer t'on application sur "New" en selectionant "Create new pipeline" </p>
 
 <div class="card box-shadow-0 border-success">
@@ -38,7 +32,7 @@
 <div class="card box-shadow-0 border-success">
   <div class="card-content collapse show">
     <div class="card-body">
-      <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ bIS</h4>
+      <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ BIS</h4>
       <div class="text-center">
         <img class="img-fluid" src="https://i.imgur.com/XPC49iC.png" alt="Create_application">
       </div>
@@ -49,7 +43,6 @@
 <p>A ce stade tu viens déjà de créer une application heroku pipeline fonctionnelle !!!</p>
 
 <h4>3.1.2 Création des applications heroku</h4>
-
 <p>Une fois l'appli heroku créée tu arrives sur une page ou il y a 3 zones (Review Apps , STAGING et PRODUCTION) dans staging clique sur 'add app' puis 'create new app', il te faudra lui donner le nom de t'on app en dev et surtout n'oublie pas la région comme sur l'image </p>
 
 <div class="card box-shadow-0 border-success">
@@ -68,7 +61,7 @@
 <div class="card box-shadow-0 border-success">
   <div class="card-content collapse show">
     <div class="card-body">
-      <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ bIS</h4>
+      <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ BIS</h4>
       <div class="text-center">
         <img class="img-fluid" src="https://i.imgur.com/nQGoLbF.png" alt="Créer l'appli en prod">
       </div>
@@ -77,48 +70,74 @@
 </div>
 
 <h4>3.1.3 Branchement application heroku et github</h4>
+<p>Pour connecter tes branchs à l'application heroku il te faut cliquer sur les deux petites flèches en bas à droite de ton app "Deploy a branch", sélectionne la branch github 'development' puis déploie-la</p>
 
-<p>Pour connecter vos branch a l'application heroku il vous faut cliquer sur les deux petit flech en bas a droit de votre app "Deploy a branch" selection la branch dev pour dev Deploy faire la meme pour prod avec main </p>
-<img class="img-fluid" src="https://i.imgur.com/JvpvwM9.png" alt="Deploy branch">
-
-<h4>3.1.4 Branchement application heroku et RoR</h4>
-
-<p></p>
-<img class="img-fluid" src="https://i.imgur.com/aNDrJMq.png" alt="name">
-
-<h3>3.2 Passage de dev à prod</h3>
-
-<p>Maintenant pour mettre votre application developpement en production repasser votre application en staging et vous aurez un bouton de disponible qui est "Promote to production" </p>
-<img class="img-fluid" src="https://i.imgur.com/xWK4Cxu.png" alt="name">
-
-
-<pre><code class="language-ruby"></code></pre>
-
-
-<h3>3.3 Erreur ?!</h3>
-
-<pre><code class="language-ruby"></code></pre>
-<pre><code class="language-bash"></code></pre>
-<p></p>
-
-<p></p>
-
-
-<div class="card box-shadow-0 border-danger">
+<div class="card box-shadow-0 border-success">
   <div class="card-content collapse show">
     <div class="card-body">
-      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
-      <p class="card-text">Cette solution n'est pas la solution unique et universelle pour la création de pipeline heroku.</p>
-      <p>n'hésite pas à te servir de la doc ou de faire tes propres recherches si notre ressource n'est pas clair pour toi ;)</p>
+      <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ</h4>
+      <div class="text-center">
+        <img class="img-fluid" src="https://i.imgur.com/JvpvwM9.png" alt="Deploy branch">
+      </div>
     </div>
   </div>
 </div>
+
+<h4>3.1.4 Branchement application heroku et RoR</h4>
+<p>Pour commencer il te faudras récupéré ton lien git heroku, celui-ci ce trouve dans la partie "Settings" de ton application en dev</p>
+
+<div class="card box-shadow-0 border-success">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ</h4>
+      <div class="text-center">
+        <img class="img-fluid" src="https://i.imgur.com/aNDrJMq.png" alt="name">
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Ensuite il te suffit de simplement te rendre sur la branche development en local de ta machine puis de taper cette commande :</p>
+<code class="language-bash">git remote add heroku lien-de-on-git-heroku</code>
+<p>Te voici enfin connecté à ton application heroku</p>
 
 <div class="card box-shadow-0 border-info">
   <div class="card-content collapse show">
     <div class="card-body">
       <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
-      <p class="card-text">Si jamais ceci s'affiche à ton écran</p>
+      <p class="card-text">Cela fonctionne dans un sans comme dans l'autre, si tu souhaite changer de branche heroku il te suffit de faire :</p>
+      <pre><code class="language-bash">git remote remove heroku</code></pre>
+      <br>
+      <p class="card-text">Tu peux également vérifier à quel remote d'heroku tu es brancher avec cette commande :</p>
+      <pre><code class="language-bash">git remote --v</code></pre>
+    </div>
+  </div>
+</div>
+
+<h3>3.2 Passage de dev à prod</h3>
+<p>Maintenant pour mettre ton application developpement en production, il te suffit de la repasser en staging, à partir de la tu pourras commencer à la tester pour la production, comme vu dans les cours précédent.</p>
+<p>Suite à cela, tu auras un bouton de disponible qui est "Promote to production" </p>
+<div class="card box-shadow-0 border-success">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🎨 EXEMPLE ILLUSTRÉ</h4>
+      <div class="text-center">
+        <img class="img-fluid" src="https://i.imgur.com/xWK4Cxu.png" alt="name">
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Une fois en production n'oublie pas de changer de branche heroku sur ton application en locale</p>
+
+
+<h3>3.3 Erreur ?!</h3>
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">Si jamais ceci (ou toutes autres pages d'erreur) s'affiche à ton écran</p>
       <div class="text-center">
         <img class="img-fluid" src="https://i.imgur.com/e74hIFn.png?1" alt="PaaS">
       </div>
@@ -130,13 +149,29 @@
 </div>
 
 <h2>4. Points importants à retenir</h2>
-<p>Créer d'abord ton application heroku pipeline via le site</p>
-<p>Puis créer toi des applications de dev et de prod</p>
+<ul>
+<li>Créer d'abord ton application heroku pipeline via le site</li>
+<li>Puis créer toi des applications de dev et de prod</li>
+<li>Branche ton app dev à ta branche github en dev</li>
+<li>Branche ton app en local à ton app heroku avec la commande <code>git remote add heroku lien-de-on-git-heroku</code></li>
+<li>N'oublie pas de faire tes <code>heroku run rails db:migrate</code> et autres commandes de configuration</li>
+<li>pipeline te permet de passer de ton app dev à prod assez facilement (quand tu n'as pas d'erreur)</li>
+<li>Et quand tu as des erreurs <code>heroku logs --tails</code> peux fortement t'aider</li>
+</ul>
 
-<p></p>
 <pre><code class="language-bash"></code></pre>
 
+<div class="card box-shadow-0 border-danger">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">⚠️ ALERTE ERREUR COMMUNE</h4>
+      <p class="card-text">Cette solution n'est pas la solution unique et universelle pour la création de pipeline heroku.</p>
+      <p>n'hésite pas à te servir de la doc ou de faire tes propres recherches si notre ressource n'est pas assez clair pour toi ;)</p>
+    </div>
+  </div>
+</div>
+
 <h2>5. Pour aller plus loin</h2>
-<p>Voici la doc complète d'<a href="https://devcenter.heroku.com/articles/pipelines" target="_blank">heroku pipeline</a>créé par eux mêmes</p>
+<p>Voici la doc complète d'<a href="https://devcenter.heroku.com/articles/pipelines" target="_blank">heroku pipeline</a> créé par eux mêmes</p>
 <p>Une autre doc faite par <a href="https://trailhead.salesforce.com/fr/content/learn/modules/heroku-flow/create-a-heroku-pipeline-and-run-review-apps" target="_blank">salesforce</a></p>
 <p>Ainsi qu'un doc complète fait par <a href="https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/deployment" target="_blank">The Odin Project</a></p>
